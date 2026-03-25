@@ -30,6 +30,10 @@ export class PurchaseService {
       };
     }
     fs.writeFileSync(this.dbPathPurchase, JSON.stringify(data, null, 2));
-    return data;
+    return {
+      success: true,
+      data: null,
+      message: `Deleted purchase with id ${id} successfully`,
+    };
   }
 }
