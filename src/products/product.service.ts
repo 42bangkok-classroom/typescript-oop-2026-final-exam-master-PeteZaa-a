@@ -6,6 +6,6 @@ export class ProductService {
 
   findAll() {
     const readDb = fs.readFileSync(this.dbProduct, 'utf8');
-    return JSON.parse(readDb);
+    return JSON.parse(readDb) as string[];
   }
 }
