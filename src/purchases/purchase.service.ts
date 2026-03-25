@@ -15,20 +15,7 @@ export class PurchaseService {
   findOne(id: number) {
     const data = this.findAll();
     const findOne = data.find((e) => e.id === id);
-    if (id === -1) {
-      return {
-        success: false,
-        data: null,
-        message: `Purchase with id ${id} not found`,
-      };
-    }
-    if (id) {
-      return {
-        success: true,
-        data: findOne,
-        message: 'Fetched purchase successfully',
-      };
-    }
+    return findOne;
   }
 
   remove(id: number) {
