@@ -18,11 +18,7 @@ export class PurchaseController {
   @Get(':id')
   findOne(@Param('id') id: number) {
     const result = this.purchaseservice.findOne(id);
-    return {
-      success: true,
-      data: result,
-      message: 'Fetched purchase successfully',
-    };
+    return result;
   }
 
   @Delete(':id')
