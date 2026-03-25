@@ -18,13 +18,4 @@ export class AppController {
       message: result,
     };
   }
-  @Get()
-  findAll(): ApiResponse<T> {
-    const result = this.appService.findAll();
-    return {
-      success: true,
-      data: result,
-      message: 'Fetched products successfully',
-    };
-  }
 }
