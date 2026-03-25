@@ -8,6 +8,6 @@ export class PurchaseService {
 
   findAll() {
     const readDb = fs.readFileSync(this.dbPathPurchase, 'utf8');
-    return JSON.parse(readDb) as string;
+    return JSON.parse(readDb) as string[];
   }
 }
