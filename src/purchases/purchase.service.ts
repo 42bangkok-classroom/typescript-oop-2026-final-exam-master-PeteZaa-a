@@ -4,7 +4,7 @@ import { join } from 'path';
 
 @Injectable()
 export class PurchaseService {
-  private readonly dbPathPurchase = join(process.cwd(), 'data/purchase.json');
+  private readonly dbPathPurchase = join(process.cwd(), 'data/purchases.json');
 
   findAll() {
     const readDb = fs.readFileSync(this.dbPathPurchase, 'utf8');
