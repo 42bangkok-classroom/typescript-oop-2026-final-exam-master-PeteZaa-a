@@ -1,5 +1,5 @@
 export interface Purchase {
-  id: string;
+  id: number;
   customerName: string;
   pruchaseDate: string;
   items: [PurchaseItem];
