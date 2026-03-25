@@ -10,22 +10,21 @@ export class AppController {
   getHello(): ApiResponse<T> {
     const result = this.appService.getHello();
     return {
-      "success": true,
-      "data": {
-        "service": 'purchase-api',
-        "version": '1.0.0'
+      success: true,
+      data: {
+        service: 'purchase-api',
+        version: '1.0.0',
       },
-      "message": 'Hello NestJS'
-    }
+      message: result,
+    };
   }
   @Get()
   findAll(): ApiResponse<T> {
     const result = this.appService.findAll();
     return {
-      "success": true,
-      "data": result,
-      "message": 'Fetched products successfully'
-    }
-
+      success: true,
+      data: result,
+      message: 'Fetched products successfully',
+    };
   }
 }
