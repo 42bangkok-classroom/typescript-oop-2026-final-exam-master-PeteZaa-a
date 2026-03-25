@@ -28,10 +28,12 @@ export class PurchaseController {
   @Delete(':id')
   remove(@Param('id') id: number) {
     const result = this.purchaseservice.remove(id);
-    return {
-      success: true,
-      data: result,
-      message: `Deleted purchase with id ${id} sucessfully`,
-    };
+    if (id) {
+      return {
+        success: true,
+        data: result,
+        message: `Deleted purchase with id ${id} sucessfully`,
+      };
+    }
   }
 }

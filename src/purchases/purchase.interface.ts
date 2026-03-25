@@ -3,7 +3,7 @@ export interface Purchase {
   customerName: string;
   pruchaseDate: string;
   items: [PurchaseItem];
-  totalPrice: number
+  totalPrice: number;
 }
 
 export interface PurchaseItem {
